@@ -1,0 +1,63 @@
+<h1>Home</h1>
+</br>
+<h3>Listing ideas</h3>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Picture</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ideas.each do |idea| %>
+  <tr>
+    <td><%= idea.name %></td>
+    <td><%= idea.description %></td>
+    <td><%= idea.picture %></td>
+    <td><%= link_to 'Show', idea %></td>
+    <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
+    <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Idea', new_idea_path %>
+</br>
+<br />
+
+<h3>Listing students</h3>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+    <th>Twitter handle</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @students.each do |student| %>
+  <tr>
+    <td><%= student.first_name %></td>
+    <td><%= student.last_name %></td>
+    <td><%= student.age %></td>
+    <td><%= student.twitter_handle %></td>
+    <td><%= student.email %></td>
+    <td><%= link_to 'Show', student %></td>
+    <td><%= link_to 'Edit', edit_student_path(student) %></td>
+    <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student', new_student_path %>
