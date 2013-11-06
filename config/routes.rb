@@ -1,8 +1,8 @@
 Ideator::Application.routes.draw do
   resources :ideas
+  resources :students
 
   # root to: 'ideas#index'
-
   get '/' => 'ideas#index'
 
   # The priority is based upon order of creation:
