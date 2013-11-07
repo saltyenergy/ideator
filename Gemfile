@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
+
 gem 'carrierwave'
+# Carrierwave - for image uploading ability
+
+gem 'Minimagick'
+# Minimagick - resize images. Useful when creating thumbnails.
+# Must install Imagemagick on machine first.
+# http://www.imagemagick.org/script/binary-releases.php?ImageMagick=vkv0r0at8sjl5qo91788rtuvs3#windows
+# http://guides.railsgirls.com/thumbnails/
 
 gem 'rails', '3.2.13'
 
